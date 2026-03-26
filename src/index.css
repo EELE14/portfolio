@@ -1,0 +1,60 @@
+/* Copyright (c) 2026 eele14. All Rights Reserved. */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-lora: "Lora", Georgia, serif;
+  --font-sans: "Open Sans", system-ui, sans-serif;
+
+  --color-bg: #f7f3ed;
+  --color-surface: #efe9e0;
+  --color-border: #ddd4c6;
+  --color-text: #1a1714;
+  --color-muted: #7a6e62;
+  --color-forest: #c4602a;
+  --color-forest-dark: #9e3e18;
+  --color-accent: #e8a882;
+  --color-accent-bg: #faeee5;
+  --color-topo: #cec4b8;
+}
+
+:root.dark {
+  --color-bg: #0d1322;
+  --color-surface: #131a2e;
+  --color-border: #1e2d48;
+  --color-text: #ede8e0;
+  --color-muted: #8090a8;
+  --color-forest: #e8935c;
+  --color-forest-dark: #f0ab7a;
+  --color-accent: #c47a4a;
+  --color-accent-bg: #1f140c;
+  --color-topo: #1a2640;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
